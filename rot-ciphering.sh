@@ -1,16 +1,20 @@
 #!/bin/bash
 
-if [[ $2 == "" ]]
+read -s -p 'Type your pass: ' pass
+echo
+read -p 'Type rotation position: ' rot
+
+if [[ $rot == "" ]]
 then
 		echo add second argument
 		exit 0
 fi
 
-if (($2 > 26))
+if (($rot > 26))
 then
 		echo second argument can not be greater than 25
 		exit 0
-elif (($2 < 1))
+elif (($rot < 1))
 then
 		echo first argument can not be lower than 1
 		exit 0
@@ -22,5 +26,5 @@ do
 		arr+=($i)
 done
 
-echo $1 | tr a-zA-Z ${arr[$2]}-za-${arr[$2-1]}${arr[$2+26]}-ZA-${arr[$2+25]}
+echo $pass | tr a-zA-Z ${arr[$rot]}-za-${arr[$rot-1]}${arr[$rot+26]}-ZA-${arr[$rot+25]}
 
