@@ -5,22 +5,28 @@ while [ TRUE ]
 do
 	read -s -p 'Type your pass: ' pass
 	echo
+	read -s -p 'Type your pass (again)' pass2
+	echo
+	if [[ $pass != $pass2 ]]
+	then
+			echo "passwords don't match"
+			continue
+	fi
 	read -p 'Type rotation position: ' rot
 
 	if [[ $rot == "" ]]
 	then
 			echo add second argument
-			exit 0
+			continue
 	fi
-
 	if (($rot > 26))
 	then
 			echo second argument can not be greater than 25
-			exit 0
+			continue
 	elif (($rot < 1))
 	then
 			echo first argument can not be lower than 1
-			exit 0
+			continue
 	fi
 	
 	arr=()
