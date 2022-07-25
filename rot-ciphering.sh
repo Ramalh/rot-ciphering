@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'Type ^C (ctrl + c)'
+echo 'Type ^C (ctrl + c) to exit'
 while [ TRUE ]
 do
 	read -s -p 'Type your pass: ' pass
