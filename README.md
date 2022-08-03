@@ -1,3 +1,5 @@
+#Rot-ciphering manual page
+
 Rot-ciphering.sh is for ciphering text by rotating by n.
 
 But program can rotate only upper and lowercase alphabet.
