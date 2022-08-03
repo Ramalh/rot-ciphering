@@ -1,4 +1,4 @@
-#Rot-ciphering manual page
+# Rot-ciphering manual page
 
 Rot-ciphering.sh is for ciphering text by rotating by n.
 
