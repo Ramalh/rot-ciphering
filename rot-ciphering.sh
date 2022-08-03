@@ -21,7 +21,7 @@ do
 			echo "---------------------"
 			continue
 	fi
-	if (($rot > 26))
+	if (($rot >= 26))
 	then
 			echo second argument can not be greater than 25
 			echo "---------------------"
