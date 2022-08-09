@@ -15,20 +15,20 @@ do
 	fi
 	read -p "Type rotation position: " rot
 
-	if [[ -z $rot ]]
+	if [[ ! ( $rot =~ ^[0-9]+$ ) || -z $rot ]]
 	then
-			echo "please add rotational position (int)" >&2
+			echo "please add rotational position (positive integer inclusively between 1 and 25)" >&2
 			echo "---------------------"
 			continue
 	fi
-	if (($rot >= 26))
+	if (($rot > 25))
 	then
-			echo "second argument can not be greater than 25" >&2
+			echo "rotation value can not be greater than 25" >&2
 			echo "---------------------"
 			continue
 	elif (($rot < 1))
 	then
-			echo "first argument can not be lower than 1" >&2
+			echo "rotation value can not be lower than 1" >&2
 			echo "---------------------"
 			continue
 	fi
